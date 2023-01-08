@@ -7,9 +7,11 @@
 
 import Foundation
 import Combine
+import RealmSwift
 
 public protocol CategoryDetailUseCase {
     func getCategory() -> CategoryModel
+    func categoryIsExist(category: CategoryModel) -> CategoryModel?
 }
 
 // create interactor detail
@@ -29,6 +31,14 @@ public class CategoryDetailInteractor: CategoryDetailUseCase {
 
     public func getCategory() -> CategoryModel {
         return category
+    }
+
+    public func categoryIsExist(category: CategoryModel) -> CategoryModel {
+        let isExist =  realm.objects(FavoriteCategoryEntity.self).where {
+            $0.id == category.id
+        }.first
+
+        return isExist
     }
 
 }
