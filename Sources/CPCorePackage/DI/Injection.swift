@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import RealmSwift
+
 
 public final class Injection: NSObject {
     private func provideRepositoryCategory() -> CategoryRepositoryProtocol {
