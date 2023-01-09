@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 class CategoryEntity: Object {
     @objc dynamic var id: String = ""

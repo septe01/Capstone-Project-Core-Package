@@ -6,7 +6,6 @@
 //
 
 import Foundation
-import RealmSwift
 
 public class FavoriteCategoryEntity: Object {
     @Persisted(primaryKey: true) public var id: String  = ""

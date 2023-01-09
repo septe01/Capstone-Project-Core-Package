@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import RealmSwift
 
 protocol FavoriteLocalDataSourceProtocol {
     func getFavorites() -> AnyPublisher<[FavoriteCategoryEntity], Error>

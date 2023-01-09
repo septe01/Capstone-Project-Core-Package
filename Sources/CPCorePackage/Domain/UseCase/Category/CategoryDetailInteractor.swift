@@ -7,7 +7,6 @@
 
 import Foundation
 import Combine
-import RealmSwift
 
 public protocol CategoryDetailUseCase {
     func getCategory() -> CategoryModel
